@@ -40,7 +40,8 @@ print(manualTransmission(120, 2.8)) # 0.6418125
 # the local admin account. Use session = false so no 
 # remote R session started
 remoteLogin("http://lon-hadoop-03.westeurope.cloudapp.azure.com:12800", 
-            username = "admin", 
+
+username = "admin", 
             password = "Pa55w.rd",
             session = FALSE)
 
@@ -100,4 +101,10 @@ cat(swagger, file = "swagger.json", append = FALSE)
 # command 
   # dotnet Microsoft.RServer.Utils.AdminUtil/Microsoft.RServer.Utils.AdminUtil.dll
 
+#VAlues hp 120 wt 2.8
+
+#Download results to pc from /tmp/perf-run-2018-02-15-105117.html
+# commnand 
+# pscp root@lon-hadoop-03.westeurope.cloudapp.azure.com:/tmp/perf-run-2018-02-15-105117.html c:\share\perfrun.html
+# Open html on local to show it 
 

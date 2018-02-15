@@ -1,4 +1,6 @@
-# Conexion que genera promp user/pass
+# 1        Conexion que genera promp user/pass
+
+
 
 remoteLogin("http://lon-hadoop-03.westeurope.cloudapp.azure.com:12800", 
             session = TRUE)
@@ -14,8 +16,15 @@ remoteLogin(
   password = "Pa55w.rd")
 
 
-exit
+# listo vairables creadas en local  /remoto 
 
+ls()
+
+# cambio de contexto a local  pausando conexion remota 
+
+pause()
+
+resume()
 
 
 
@@ -58,6 +67,17 @@ mysamplefilepath <- paste(readPath, "CensusWorkers.xdf" ,sep="/")
 
 mysamplefilepath
 
+
+
+# Create a data source for the CensusWorkers.xdf file
+workerInfo <- RxXdfData(mysamplefilepath)
+
+# Perform functions that read from the CensusWorkers.xdf file
+head(workerInfo, 100)
+rxSummary(~., workerInfo)
+
+
+
 Command
 getwd()
 
@@ -67,20 +87,12 @@ list.dirs(path = readPath, full.names = TRUE, recursive = FALSE)
 
 
 
-library(dplyr)
-taxi_url <- "http://alizaidi.blob.core.windows.net/training/taxi_df.rds"
-taxi_df  <- readRDS(gzcon(url(taxi_url)))
-(taxi_df <- tbl_df(taxi_df))
 
 
-# Create a data source for the CensusWorkers.xdf file
-workerInfo <- RxXdfData(mysamplefilepath)
-
-# Perform functions that read from the CensusWorkers.xdf file
-head(workerInfo,100)
-rxSummary(~., workerInfo)
 
 
+
+exit
 remoteLogout() 
 
 

@@ -1,0 +1,36 @@
+
+remoteLogin("http://lon-hadoop-03.westeurope.cloudapp.azure.com:12800", 
+            session = TRUE)
+
+# Conexion directa especificando server /usuario /clave
+
+remoteLogin(
+  deployr_endpoint = "http://lon-hadoop-03.westeurope.cloudapp.azure.com:12800", 
+  session = TRUE, 
+  diff = TRUE, 
+  commandline = TRUE, 
+  username = "admin", 
+  password = "tipepass before running")
+
+
+exit
+
+
+
+
+
+#Ejemplos de uso local
+
+x<-rnorm(1000)
+
+hist(x)
+histogram(x)
+
+
+
+
+
+# Create a local data frame
+DF <- data.frame(sex = c("Male", "Male", "Female", "Male"),
+                 age = c(20, 20, 12, 10), score = 1.1:4.1)
+summary(DF)

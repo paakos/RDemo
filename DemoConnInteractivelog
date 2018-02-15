@@ -1,4 +1,3 @@
-
 remoteLogin("http://lon-hadoop-03.westeurope.cloudapp.azure.com:12800", 
             session = TRUE)
 
@@ -10,7 +9,7 @@ remoteLogin(
   diff = TRUE, 
   commandline = TRUE, 
   username = "admin", 
-  password = "tipepass before running")
+  password = "typepass before running")
 
 
 exit

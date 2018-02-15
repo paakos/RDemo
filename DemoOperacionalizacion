@@ -93,3 +93,11 @@ swagger <- api$swagger()
 cat(swagger, file = "swagger.json", append = FALSE)
 
 # Now share this Swagger-based JSON so others can consume it
+
+
+# Directory MRS
+  # cd /usr/lib64/microsoft-r/rserver/o16n/9.1.0
+# command 
+  # dotnet Microsoft.RServer.Utils.AdminUtil/Microsoft.RServer.Utils.AdminUtil.dll
+
+
